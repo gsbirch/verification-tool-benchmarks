@@ -1,0 +1,2 @@
+domain,problem,search,heuristic,cost,goal,atl,ctl,el,solution_index,duplicates_skipped,visited,generated,time_ms,memory_delta_mb,success,author_signature,plan
+space,space.txt,astar,rp,temporal,1.0,9,3,1,1,0,26,329,57,2,true,"begin_erupt(Surface) erupt(Surface)","begin_erupt(Surface) | erupt(Surface) | goal(relationship(Zoe, Lizard) <= 0 & status(Zoe) != Dead & status(Lizard) != Dead & status(Surface) == Uninhabitable)"
