@@ -15,7 +15,7 @@ OUTPUT_DIR = "out"
 # The node limit for each search
 NODE_LIMIT = 10000
 # The path of the jar of the verification tool
-JAR = "verify.jar"
+JAR = "sabre-verification-tool/build/jar/verify.jar"
 
 # The messages that print out when the tool succeeds/fails in finding an explanation
 SUCCESS_MESSAGE = "This plan can be explained by Sabre within the given constraints"
