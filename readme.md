@@ -4,7 +4,11 @@ This tool contains some benchmarks for [Sabre Verification Tool](https://github.
 
 # Building and Running the Tests
 
-To run the already included tests is simple. First, you will need to place a compiled jar of the verification tool into the same directory as build.py. Then generate the shell program by running the python file:
+To run the already included tests is simple. First, compile the included version of the Sabre Verification Tool:
+```
+(cd sabre-verification-tool && mvn clean package)
+```
+ Then generate the shell program by running the python file:
 ```
 python build.py
 ```
@@ -14,3 +18,10 @@ chmod +x run_tests.sh
 ./run_tests.sh
 ```
 
+Alternatively, do it all at once:
+```
+(cd sabre-verification-tool && mvn clean package)
+python build.py
+chmod +x run_tests.sh
+./run_tests.sh
+```
