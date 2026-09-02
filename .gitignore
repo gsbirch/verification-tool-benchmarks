@@ -2,3 +2,4 @@ run_tests.sh
 sabre.jar
 verify.jar
 plans/
+out/
