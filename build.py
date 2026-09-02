@@ -1,4 +1,5 @@
 import csv
+import os
 from pathlib import Path
 
 # This sets the sh file that is generated to run the tests
@@ -19,6 +20,10 @@ JAR = "verify.jar"
 # The messages that print out when the tool succeeds/fails in finding an explanation
 SUCCESS_MESSAGE = "This plan can be explained by Sabre within the given constraints"
 FAIL_MESSAGE = "This plan can not be explained by Sabre within the given constraints"
+
+# generate the two needed folders if they don't exist
+os.makedirs("out", exist_ok=True)
+os.makedirs("plans", exist_ok=True)
 
 csv_folder = Path(CSV_DIR)
 
