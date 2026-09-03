@@ -29,6 +29,8 @@ csv_folder = Path(CSV_DIR)
 
 fileNames = [file.name for file in csv_folder.glob("*.csv")]
 
+num_tests = 0
+
 # dictionaries for the different types of searches performed
 # right now this is just astar search w/ temporal cost
 search_to_m = { "astar": "bf" }
@@ -45,6 +47,7 @@ with open(OUTPUT_PROGRAM, "w") as out:
 
             # generate one test for each row
             for row in data:
+                num_tests += 1
                 # the file where the plan will be generated
                 test_name = f"{row['problem'][:-4]}_{int(float(row['goal']))}_{row['solution_index']}"
                 plan_file = f"{PLANS_DIR}/{test_name}_PLAN.txt"
@@ -84,3 +87,5 @@ with open(OUTPUT_PROGRAM, "w") as out:
 
     # at the end, the program will report how many tests were not explained
     out.write(f"echo \"Tests not explained: $failures\"")
+
+print(f" {num_tests} tests generated!")
